@@ -28,6 +28,7 @@ length = len(source)
         if cur_min_index != index:
         #현재 index와 커민 인덱스를 바꿔준다.
             source[cur_min_index],source[index] = source[index],source[cur_min_index]
+	    print(cur_min_index != index:
 
 
 print(source)
