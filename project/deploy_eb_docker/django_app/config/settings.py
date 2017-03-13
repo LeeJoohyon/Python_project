@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 import json
 import os
-
-DEBUG = os.environ.get('MODE') == 'DEBUG'
+DEBUG = True
+# DEBUG = os.environ.get('MODE') == 'DEBUG'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
@@ -22,12 +22,12 @@ if DEBUG:
     CONFIG_FILE = os.path.join(CONF_DIR, 'settings_local.json')
 else:
     CONFIG_FILE = os.path.join(CONF_DIR, 'setting_deploy.json')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    STATIC_DIR,
-)
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (
+#     STATIC_DIR,
+# )
+# TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 config_common = json.loads(open(CONFIG_FILE_COMMON).read())
@@ -123,9 +123,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
